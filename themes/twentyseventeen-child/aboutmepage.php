@@ -16,8 +16,9 @@
             <div class="entry-content">
               <?php the_content(); ?>
  
-              <p>Hi, I’m Susan, the creator of It’s Susan’s Thing.  I’ve been called many things:  influencer, blogger, brand strategist, fit model, creative director and trend forecaster. <br> <div></div>Founded in 2019, this blog is a source of chic sophistication and style inspiration for fashionistas from all around the world. It’s Susan’s Thing is the discerning girl’s destination for all things style, travel, art and novelties in the fashion world. And probably a few other rambling (and hopefully amusing) mishaps along the way.
-				</p>
+              <p>
+              	<div>Hi, I’m Susan, the creator of It’s Susan’s Thing.  I’ve been called many things:  influencer, blogger, brand strategist, fit model, creative director and trend forecaster.</div><div>Founded in 2019, this blog is a source of chic sophistication and style inspiration for fashionistas from all around the world. It’s Susan’s Thing is the discerning girl’s destination for all things style, travel, art and novelties in the fashion world. And probably a few other rambling (and hopefully amusing) mishaps along the way.</div>
+			  </p>
  
             </div><!-- .entry-content -->
  
