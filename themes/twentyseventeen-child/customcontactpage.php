@@ -35,6 +35,7 @@
   }
 </style>
 <div id="respond">
+<!-- Source: https://premium.wpmudev.org/blog/how-to-build-your-own-wordpress-contact-form-and-why/ -->
   <?php echo $response; ?>
   <form action="<?php the_permalink(); ?>" method="post">
     <p><label for="name">Name: <span>*</span> <br><input type="text" name="message_name" value="<?php echo esc_attr($_POST['message_name']); ?>"></label></p>
@@ -44,7 +45,24 @@
     <input type="hidden" name="submitted" value="1">
     <p><input type="submit"></p>
   </form>
-</div>
+</div><?php
+
+if ($_POST['submit']) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $from = 'From: itssusansthing.xyz'; 
+    $to = 'szs10@georgetown.edu'; 
+    $subject = 'Email Inquiry';
+
+    $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+    if (mail ($to, $subject, $body, $from)) { 
+       $success = "Message successfully sent";
+    } else {
+        $success = "Message Sending Failed, try again";
+    }
+}
+?>
  
             </div><!-- .entry-content -->
  
@@ -55,5 +73,24 @@
     </div><!-- #content -->
   </div><!-- #primary -->
  
+<?php
+
+if ($_POST['submit']) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $from = 'From: agriindiaexp.com'; 
+    $to = 'shridhar.kagi@gmail.com'; 
+    $subject = 'Email Inquiry';
+
+    $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+    if (mail ($to, $subject, $body, $from)) { 
+       $success = "Message successfully sent";
+    } else {
+        $success = "Message Sending Failed, try again";
+    }
+}
+?>
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
